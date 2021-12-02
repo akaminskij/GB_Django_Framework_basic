@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03e87875-4e0a-420f-bd70-b55d3caa76a2" name="Changes" comment="" />
+    <list default="true" id="390e2f34-8cdd-4c12-9d8f-8b4a5e2fb8cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +14,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="215zNXZlqMb5c1PBN2Y4jR8tONV" />
+  <component name="ProjectId" id="213pS3nMFEgNMeohR2bdwrsf53x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,20 +24,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Geekbrains\GeekShop\geekshop\static" />
+      <recent name="D:\Geekbrains\GeekShop\geekshop\mainapp\templates\mainapp" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="03e87875-4e0a-420f-bd70-b55d3caa76a2" name="Changes" comment="" />
-      <created>1637245696851</created>
+      <changelist id="390e2f34-8cdd-4c12-9d8f-8b4a5e2fb8cd" name="Changes" comment="" />
+      <created>1637179622338</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637245696851</updated>
-      <workItem from="1637580043584" duration="9000" />
-      <workItem from="1637677119168" duration="7000" />
-      <workItem from="1637677245309" duration="4221000" />
+      <updated>1637179622338</updated>
+      <workItem from="1637619641541" duration="3462000" />
+      <workItem from="1637785787645" duration="7175000" />
+      <workItem from="1637793286791" duration="6000" />
     </task>
     <servers />
   </component>
