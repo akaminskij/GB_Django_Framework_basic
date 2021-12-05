@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render
-from .models import ProductCategory, Product
+
+from mainapp.models import ProductCategory, Product
 
 
 def index(request):
@@ -27,6 +28,7 @@ def contact(request):
 
 def products(request, pk=None):
     links_menu = ProductCategory.objects.all()
+    # print(links_menu)
     context = {
         'links_menu': links_menu,
         'title': 'Товары',
