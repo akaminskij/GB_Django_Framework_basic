@@ -1,0 +1,92 @@
+[
+    {
+        "category": "дом",
+        "name": "комфорт 1",
+        "image": "products_images/product-1.jpg",
+        "short_desc": "комфортный стул",
+        "description": "подойдет для просмотра фильмов",
+        "price": "2999",
+        "quantity": "10"
+    },
+    {
+        "category": "дом",
+        "name": "комфорт 2",
+        "image": "products_images/product-2.jpg",
+        "short_desc": "самый комфортный стул",
+        "description": "подойдет для просмотра лучших фильмов",
+        "price": "3999",
+        "quantity": "10"
+    },
+    {
+        "category": "дом",
+        "name": "супер комфорт 3",
+        "image": "products_images/product-3.jpg",
+        "short_desc": "супер комфортный стул",
+        "description": "подойдет для просмотра лучших фильмов",
+        "price": "4999",
+        "quantity": "10"
+    },
+    {
+        "category": "офис",
+        "name": "офис 1",
+        "image": "products_images/product-4.jpg",
+        "short_desc": "бюджетный стул",
+        "description": "оптимальный вариант для клиентов",
+        "price": "999",
+        "quantity": "10"
+    },
+    {
+        "category": "офис",
+        "name": "офис 2",
+        "image": "products_images/product-5.jpg",
+        "short_desc": "сандартный офисный стул",
+        "description": "оптимальный вариант для сотрудников вашего офиса",
+        "price": "1999",
+        "quantity": "10"
+    },
+    {
+        "category": "офис",
+        "name": "офис 3",
+        "image": "products_images/product-11.jpg",
+        "short_desc": "стул для директора",
+        "description": "стул для директора",
+        "price": "2999",
+        "quantity": "10"
+    },
+    {
+        "category": "модерн",
+        "name": "модерн 1",
+        "image": "products_images/product-21.jpg",
+        "short_desc": "модерн стул",
+        "description": "для современного интерьера",
+        "price": "1999",
+        "quantity": "10"
+    },
+    {
+        "category": "модерн",
+        "name": "модерн 2",
+        "image": "products_images/product-31.jpg",
+        "short_desc": "модерн 2 стул",
+        "description": "для современного интерьера",
+        "price": "2999",
+        "quantity": "10"
+    },
+    {
+        "category": "классика",
+        "name": "классика 1",
+        "image": "products_images/product-41.jpg",
+        "short_desc": "классический стул",
+        "description": "подарит уют и комфорт на все времена",
+        "price": "5999",
+        "quantity": "10"
+    },
+    {
+        "category": "классика",
+        "name": "классика 2",
+        "image": "products_images/product-51.jpg",
+        "short_desc": "классический стул",
+        "description": "подарит уют и комфорт на все времена",
+        "price": "4999",
+        "quantity": "10"
+    }
+]
