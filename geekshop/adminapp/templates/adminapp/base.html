@@ -26,12 +26,15 @@
       <div class="admin_menu">
 {#        {% include 'adminapp/includes/inc_menu.html' %}#}
         <ul class="menu">
+
           <li>
             <a href="{% url 'index' %}">На сайт</a>
           </li>
+
           <li>
             <a href="{% url 'adminapp:users' %}" class="{% if request.resolver_match.url_name == 'users' %}active{% endif %}">Пользователи</a>
           </li>
+
           <li>
             <a href="{% url 'adminapp:categories' %}"
                class="{% if request.resolver_match.url_name == 'categories' or category.name %} active {% endif %}">
@@ -40,6 +43,18 @@
               {% endif %}
             </a>
           </li>
+
+            <li>
+            <a href="{% url 'basketapp:basket' %}" class="basket">
+                 <span>
+                    {% if basket %}
+                        {{ basket.0.total_cost|floatformat:0 }} руб.<br>
+                        ({{ basket.0.total_quantity }} шт)
+                    {% endif %}
+                </span>
+                </a>
+            </li>
+
         </ul>
 
       </div>

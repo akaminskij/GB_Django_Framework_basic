@@ -13,20 +13,6 @@ from authapp.models import ShopUser
 from mainapp.models import Product, ProductCategory
 
 
-# @user_passes_test(lambda u: u.is_superuser)
-# def users(request):
-#     title = 'админка/пользователи'
-#
-#     # users_list = ShopUser.objects.all().order_by('-is_active', '-is_superuser', '-is_staff', 'username')
-#
-#     context = {
-#         'title': title,
-#         'object_list': ShopUser.objects.all().order_by('-is_active')
-#     }
-#
-#     return render(request, 'adminapp/users_list.html', context)
-
-
 class UsersListView(ListView):
     model = ShopUser
     template_name = 'adminapp/users_list.html'
@@ -34,9 +20,6 @@ class UsersListView(ListView):
     @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
-
-    # def get_queryset(self):
-    #     return ShopUser.objects.filter(is_superuser=False)
 
 
 @user_passes_test(lambda u: u.is_superuser)
