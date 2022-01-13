@@ -12,7 +12,14 @@
         {{ login_form.as_p }}
         <br>
         <input class="form-control" type="submit" value="войти">
+        <br>
         <a class="btn btn-primary form-control" href="{% url 'authapp:register' %}">Регистрация</a>
+        <br><br>
+        <a class="btn btn-primary form-control" href="{% url 'social:begin' 'vk-oauth2' %}?next=/">Вход через ВКонтакте</a>
+        <br>
+
     </form>
+
+
 
 {% endblock %}

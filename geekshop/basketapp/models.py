@@ -3,11 +3,22 @@ from django.conf import settings
 from mainapp.models import Product
 
 
+# class BasketQuerySet(models.QuerySet):
+#
+#     def delete(self, *args, **kwargs):
+#         for item in self:
+#             item.product.quantity += item.quantity
+#             item.product.save()
+#         super().delete(*args, **kwargs)
+
+
 class Basket(models.Model):
+    # objects = BasketQuerySet.as_manager()
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
-    add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)   # add_datetime create_at
+    add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)  # add_datetime create_at
 
     @property
     def product_cost(self):
@@ -25,4 +36,12 @@ class Basket(models.Model):
         _total_cost = sum(list(map(lambda x: x.product_cost, items)))
         return _total_cost
 
+    @staticmethod
+    def get_item(pk):
+        return Basket.objects.get(pk=pk)
 
+    # def delete(self, *args, **kwargs):
+    #     self.product.quantity += self.quantity
+    #     self.product.save()
+    #     super().delete(*args, **kwargs)
+    #     # super(self.__class__, self).delete()
