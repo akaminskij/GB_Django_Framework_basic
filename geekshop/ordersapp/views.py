@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 from django.shortcuts import get_object_or_404, HttpResponseRedirect
@@ -10,6 +11,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DetailView, D
 from django.views.generic.detail import DetailView
 
 from basketapp.models import Basket
+from mainapp.models import Product
 from ordersapp.models import Order, OrderItem
 from ordersapp.forms import OrderItemForm
 
@@ -132,11 +134,11 @@ def complete(request, pk):
 @receiver(pre_save, sender=Basket)
 def product_quantity_update_on_save(sender, update_fields, instance, **kwargs):
     # if update_fields is 'quantity' or 'product':
-        if instance.pk:
-            instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
-        else:
-            instance.product.quantity -= instance.quantity
-        instance.product.save()
+    if instance.pk:
+        instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
+    else:
+        instance.product.quantity -= instance.quantity
+    instance.product.save()
 
 
 @receiver(pre_delete, sender=OrderItem)
@@ -144,3 +146,14 @@ def product_quantity_update_on_save(sender, update_fields, instance, **kwargs):
 def product_quantity_update_on_delete(sender, instance, **kwargs):
     instance.product.quantity += instance.quantity
     instance.product.save()
+
+
+def get_product_price(request, pk):
+    product_price = 0.0
+
+    product = Product.objects.filter(pk=pk, is_active=True).first()
+    if product:
+        product_price = product.price
+
+    return JsonResponse({'price': product_price})
+
